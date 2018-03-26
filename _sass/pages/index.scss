@@ -24,6 +24,9 @@
   &__inner {
     display: flex;
     flex-direction: column;
+    @include media($bp-small) {
+      flex-direction: row;
+    }
   }
 
   &__item {
