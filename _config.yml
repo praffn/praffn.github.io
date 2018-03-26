@@ -8,7 +8,7 @@ collections:
 markdown: kramdown
 plugins:
   # - jekyll-feed
-  - neat
+  # - neat
   - sass
 
 analytics: GTM-KRZ9PRQ
