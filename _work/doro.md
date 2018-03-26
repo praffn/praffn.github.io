@@ -1,6 +1,6 @@
 ---
 title: Doro
-thumbnail: https://unsplash.it/800/400?image=250
+thumbnail: /assets/thumbs/doro_green_thumb.jpg
 layout: default
 ---
 
