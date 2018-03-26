@@ -1,3 +1,9 @@
 @mixin transition($property: all, $duration: $transition-duration, $easing: $transition-easing) {
   transition: $property $duration $easing;
 }
+
+@mixin media($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}

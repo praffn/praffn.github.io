@@ -1,9 +1,11 @@
 .index {
   &__title {
-    margin-top: 6rem;
-    font-size: 3.5em;
-    @include grid-column(6);
-    @include grid-push(1);
+    @include media($bp-small) {
+      margin-top: 6rem;
+      font-size: 3.5em;
+      @include grid-column(6);
+      @include grid-push(1);
+    }
   }
 
   em {
@@ -21,12 +23,17 @@
   margin-top: 3rem;
   &__inner {
     display: flex;
+    flex-direction: column;
   }
 
   &__item {
     flex: 1 auto;
-    & + * {
-      margin-left: 1.5rem;
+    margin: 0.5rem;
+
+    @include media($bp-small) {
+      & + * {
+        margin-left: 1.5rem;
+      }
     }
   }
 }

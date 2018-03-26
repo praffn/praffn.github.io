@@ -13,7 +13,7 @@ $color-accent: $color-red-bleached;
 
 $max-width: 1200px;
 $gutter-size: 1rem;
-$grid-margin: $gutter-size / 2;
+$grid-margin: $gutter-size;
 
 $neat-grid: (
   columns: 12,
@@ -26,3 +26,8 @@ $font-family-secondary: 'Trocchi', Palatino, serif;
 
 $transition-duration: 0.3s;
 $transition-easing: ease;
+
+$bp-xsmall: 321px;
+$bp-small: 415px;
+$bp-medium: 750px;
+$bp-large: 1200px;
