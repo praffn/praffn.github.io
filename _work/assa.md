@@ -1,6 +1,6 @@
 ---
 title: ASSA Abloy
-thumbnail: http://unsplash.it/800/400?image=200
+thumbnail: https://unsplash.it/800/400?image=200
 layout: default
 ---
 

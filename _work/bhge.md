@@ -1,6 +1,6 @@
 ---
 title: Baker Hughes
-thumbnail: http://unsplash.it/800/400?image=325
+thumbnail: https://unsplash.it/800/400?image=325
 layout: default
 ---
 
