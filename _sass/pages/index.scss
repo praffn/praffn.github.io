@@ -1,0 +1,32 @@
+.index {
+  &__title {
+    margin-top: 6rem;
+    font-size: 3.5em;
+    @include grid-column(6);
+    @include grid-push(1);
+  }
+
+  em {
+    font-style: normal;
+    color: $color-accent;
+  }
+
+  &__description {
+    @include grid-column(6);
+    @include grid-push(3);
+  }
+}
+
+.work {
+  margin-top: 3rem;
+  &__inner {
+    display: flex;
+  }
+
+  &__item {
+    flex: 1 auto;
+    & + * {
+      margin-left: 1.5rem;
+    }
+  }
+}

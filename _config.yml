@@ -1,0 +1,14 @@
+baseurl: "" # the subpath of your site, e.g. /blog
+url: ""
+
+collections:
+  work:
+    output: true
+
+markdown: kramdown
+plugins:
+  # - jekyll-feed
+  - neat
+  - sass
+
+analytics: GTM-KRZ9PRQ

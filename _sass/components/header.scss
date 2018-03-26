@@ -1,0 +1,10 @@
+.header {
+  padding: 1rem 0;
+}
+
+.header__logo {
+  &-link {
+    text-decoration: none;
+    color: $color-fg;
+  }
+}

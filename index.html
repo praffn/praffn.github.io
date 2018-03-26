@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="index">
+  <div class="container">
+    <h1 class="index__title">Hi, I'm Phillip.<br>I create <em>websites</em>.</h1>
+  </div>
+  <!-- <div class="container">
+    <div class="index__description">
+      <p>Hi, I'm Phillip, freelance web developer.</p>
+      <p>I'm a 24-year-old guy who's been designing and developing websites and interactive applications for 10 years.</p>
+      <p>I'm a multimedia designer of the Copenhagen School of Design and Technology, and currently studying for a bachelor in software development at the IT University of Copenhagen.</p>
+      <p>I'm always available at <a href="mailto:phillip@praffn.dk">phillip@praffn.dk</a>.</p>
+    </div>
+  </div> -->
+
+  <div class="work">
+    <div class="container work__inner">
+      {% for item in site.work limit : 3 %}
+        <div class="work__item">
+          <a href="{{ item.url }}" class="work__item-link">
+            {% include perspective-card.html title=item.title background=item.thumbnail %}
+          </a>
+        </div>        
+       {% endfor %}
+    </div>
+  </div>
+</div>

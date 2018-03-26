@@ -1,0 +1,38 @@
+<div class="logo">
+  <svg viewBox="0 0 220 220" class="logo__svg">
+    <defs>
+
+      <!--
+        $color-blue-regular: #2185C5;
+        $color-blue-light: #7ECEFD;
+        $color-red-bleached: #FF7F66;
+
+        main accent: #ff7f66
+        other: #ff2824
+      -->
+
+      <linearGradient id="logo__gradient" x1="30%" y1="-20%" x2="100%" y2="0%">
+        <!-- main -->
+        <stop offset="0%" stop-color="#ff2824">
+          <animate attributeName="stop-color" values="#ff2824; #ffbc82; #ff2824" dur="4s" repeatCount="indefinite" />
+        </stop>
+        <!-- light -->
+        <stop offset="100%" stop-color="#ffbc82">
+          <animate attributeName="stop-color" values="#ffbc82; #ff2824; #ffbc82" dur="4s" repeatCount="indefinite" />
+        </stop>              
+      </linearGradient>
+      <mask id="logo__mask" x="0" y="0" width="220" height="220" maskUnits="userSpaceOnUse">
+        <g fill="white">
+          <path d="M183.3 204.9l-37.7-65.5-4.3-7.6c-6.2 1.9-12.7 2.7-19.3 2.7h-20.2l5.9 10.4 34.5 59.9c1.8 3.2 5.9 5.7 9 5.7H181c3 0 4.1-2.4 2.3-5.6z" />
+          <path d="M180.8 68.1c0-32.6-26.2-58.6-58.8-58.6H35.3c-3.2 0-4.2 2.4-2.4 5.6l31.6 55.2 8.7 15.2h41.2l-10.3-17.9-13.3-23.1H122c12.8 0 23.8 9.9 23.8 22.7v2.2c0 12.8-11.1 23.1-23.8 23.1H37.7c-3.2 0-5.8 2.6-5.8 5.8v106.8c0 3.2 2.7 5.4 5.8 5.4h24.6c3.2 0 6.5-2.3 6.5-5.4v-77.6H122c32.6 0 58.8-26.7 58.8-59.4z" />
+        </g>
+      </mask>
+    </defs>
+    {/* <rect width="100" height="100" fill="url(#logo_gradient)" /> */}
+    <g mask="url(#logo__mask)">
+      <rect fill="black" x="0" y="0" width="220" height="220" />
+      <rect class="logo__gradient" fill="url(#logo__gradient)" x="0" y="0" width="220" height="220" />
+    </g>
+  </svg>
+  <h1 class="logo__title">phillip raffnsøe nilsson</h1>     
+</div>

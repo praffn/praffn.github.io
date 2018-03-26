@@ -1,0 +1,28 @@
+$color-dark: #3E454C;
+$color-light: #FFF6E5;
+$color-blue-regular: #2185C5;
+$color-blue-light: #7ECEFD;
+$color-red-bleached: #FF7F66;
+$color-red-bleached: #FF7F66;
+
+$color-bg: $color-light;
+$color-fg: $color-dark;
+$color-link: $color-blue-regular;
+$color-link-special: $color-blue-light;
+$color-accent: $color-red-bleached;
+
+$max-width: 1200px;
+$gutter-size: 1rem;
+$grid-margin: $gutter-size / 2;
+
+$neat-grid: (
+  columns: 12,
+  gutter: $gutter-size,
+);
+
+$font-family-primary: 'Open Sans', Helvetica, 'Helvetica Neue', Arial, sans-serif;
+$font-family-secondary: 'Trocchi', Palatino, serif;
+
+
+$transition-duration: 0.3s;
+$transition-easing: ease;

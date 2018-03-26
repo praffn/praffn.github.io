@@ -1,0 +1,27 @@
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__svg {
+  width: 2rem;
+}
+
+.logo__gradient {
+  opacity: 0;
+  @include transition(opacity);
+}
+  .logo:hover .logo__gradient {
+    opacity: 1;
+  }
+
+.logo__title {
+  margin: 0 0 0 1rem;
+  font-size: 1em;
+  font-weight: 100;
+  opacity: 0.1;
+  @include transition(opacity);
+}
+  .logo:hover .logo__title {
+    opacity: 1;
+  }

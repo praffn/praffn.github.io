@@ -1,0 +1,18 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background: $color-bg;
+  color: $color-fg;
+  font-size: 18px;
+}
+
+a {
+  color: $color-link;
+}

@@ -1,0 +1,52 @@
+.perspective-card {
+  position: relative;
+  @include transition(transform);
+  padding-bottom: 50%;
+}
+  .perspective-card:hover {
+    transform: scale(1.025);
+  }
+
+.perspective-card__container {
+  will-change: transform;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .perspective-card--enter-exit .perspective-card__container {
+    @include transition(transform);
+  }
+
+
+.perspective-card__image {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #eee;  
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.perspective-card__shadow {
+  border-radius: 8px;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  box-shadow: 0 0px 20px rgba($color-fg, 0.3);
+  opacity: 0;
+  @include transition(opacity);
+}
+  .perspective-card:hover .perspective-card__shadow {
+    opacity: 1;
+  }
+
+.perspective-card__text {
+  z-index: 1;
+  color: #fff;
+  font-size: 1.5em;
+  text-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.perspective-card--enter-exit .perspective-card__text {
+    @include transition(transform);
+  }
