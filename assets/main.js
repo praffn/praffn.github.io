@@ -19,9 +19,13 @@
   }
 
   function perspectiveCard(card) {
+    console.log('card');
+    var boundingBox = card.getBoundingClientRect();
+    var cardContainer = card.querySelector(PERSPECTIVE_CARD_CONTAINER);
+    var cardText = card.querySelector(PERSPECTIVE_CARD_TEXT);
     // attach mouse move event listener to card
     card.addEventListener('mousemove', function(evt) {
-      onMouseMove(card, evt)
+      onMouseMove(evt.clientX, evt.clientY, card, boundingBox, cardContainer, cardText)
     });
     card.addEventListener('mouseenter', function() {
       onMouseEnter(card);
@@ -36,14 +40,7 @@
     card.classList.add(PERSPECTIVE_CARD_ENTER_EXIT_CLASS);    
   } 
 
-  function onMouseMove(card, evt) {
-    // get respective container and text element
-    var cardContainer = card.querySelector(PERSPECTIVE_CARD_CONTAINER);
-    var cardText = card.querySelector(PERSPECTIVE_CARD_TEXT);
-    
-    // get mouse pos from event
-    var clientX = evt.clientX;
-    var clientY = evt.clientY;
+  function onMouseMove(clientX, clientY, card, boundingBox, cardContainer, cardText) {
     // get top,left,width,height from bounding box
     var boundingBox = card.getBoundingClientRect();
     var top = boundingBox.top;
