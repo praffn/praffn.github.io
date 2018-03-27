@@ -1,5 +1,25 @@
 <head>
-  <title>REMEMBER TO SET TITLE</title>
+  <!-- Title, description, author -->
+  {%- capture _page_title -%}
+    {%- if page.title -%}{{- page.title | append: ' | ' -}}{%- endif -%}
+    {{- site.title | default: "Untitled Website" -}}
+    {%- if site.subtitle -%}{{- site.subtitle | prepend: ' - ' -}}{%- endif -%}
+  {%- endcapture -%}
+  {%- assign _page_title = _page_title | escape -%}
+  {%- assign _page_description = page.description | default: site.description | default: _page_title | escape -%}
+
+  <title>{{- _page_title -}}</title>
+  <meta name="description" content="{{- _page_description -}}" />
+  <meta name="author" content="{{- site.author -}}" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{- _page_title -}}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="{{- site.avatar | absolute_url -}}" />
+  <meta property="og:url" content="{{- page.url | absolute_url -}}" />
+  <meta property="og:site_name" content="{{- site.title | escape -}}" />
+  <meta property="og:description" content="{{- _page_description -}}" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Trocchi" rel="stylesheet">

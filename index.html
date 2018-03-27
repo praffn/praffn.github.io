@@ -16,6 +16,9 @@ layout: default
   </div> -->
 
   <div class="work">
+    <div class="container">
+      <h2 class="work__title">Here's some of my work</h2>
+    </div>
     <div class="container work__inner">
       {% for item in site.work limit : 3 %}
         <div class="work__item">
@@ -24,6 +27,21 @@ layout: default
           </a>
         </div>        
        {% endfor %}
+    </div>
+  </div>
+
+  <div class="projects">
+    <div class="container">
+      <h2 class="projects__title">And some of my projects</h2>
+    </div>
+    <div class="container work__inner">
+      {% for item in site.projects limit : 3 %}
+        <div class="work__item">
+          <a target="_blank" href="{{ item.url }}" class="work__item-link">
+            {% include perspective-card.html title=item.title background=item.thumbnail %}
+          </a>
+        </div>        
+        {% endfor %}
     </div>
   </div>
 </div>

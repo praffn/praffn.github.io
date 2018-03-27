@@ -1,0 +1,39 @@
+$ingrid-gutter: 1rem !default;
+$ingrid-visual-color: rgba(255, 0, 0, 0.1);
+
+@mixin ingrid-container() {
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@function ingrid-column-width($columns) {
+  $ratio: $columns / 12;
+  $gutter: $ingrid-gutter + ($ingrid-gutter * $ratio);
+  @return unquote("#{percentage($ratio)} - #{$gutter}");
+}
+
+@mixin ingrid-column($columns) {
+  width: calc(ingrid-column-width($columns));
+  float: left;
+  margin-left: $ingrid-gutter;
+}
+
+@mixin ingrid-push($columns) {
+  $ratio: $columns / 12;
+  $gutter: $ingrid-gutter * 2;
+  $margin: calc(#{ingrid-column-width($columns)} + #{$gutter});
+}
+
+@mixin ingrid-visual() {
+  $col: "#{ingrid-column-width(1)} + #{$ingrid-gutter}";
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent,
+    transparent $ingrid-gutter,
+    $ingrid-visual-color $ingrid-gutter,
+    $ingrid-visual-color calc(#{$col})
+  );
+}

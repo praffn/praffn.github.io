@@ -3,8 +3,8 @@
     @include media($bp-small) {
       margin-top: 6rem;
       font-size: 3.5em;
-      @include grid-column(6);
-      @include grid-push(1);
+      @include ingrid-column(6);
+      @include ingrid-push(1);
     }
   }
 
@@ -14,13 +14,25 @@
   }
 
   &__description {
-    @include grid-column(6);
-    @include grid-push(3);
+    @include ingrid-column(6);
+    @include ingrid-push(3);
   }
 }
 
 .work {
   margin-top: 3rem;
+  @include media($bp-small) {
+    margin-top: 5rem;
+  }
+
+  &__title {
+    @include media($bp-small) {
+      font-size: 2em;
+      @include ingrid-column(8);
+      @include ingrid-push(1);
+    }
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -32,11 +44,28 @@
   &__item {
     flex: 1 auto;
     margin: 0.5rem;
+    cursor: pointer;
+
+    &-link {
+      outline: none;
+    }
 
     @include media($bp-small) {
       & + * {
         margin-left: 1.5rem;
       }
+    }
+  }
+}
+
+.projects {
+  margin-top: 6rem;
+
+  &__title {
+    @include media($bp-small) {
+      font-size: 2em;
+      @include ingrid-column(8);
+      @include ingrid-push(1);
     }
   }
 }
