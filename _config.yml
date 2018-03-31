@@ -13,14 +13,15 @@ plugins:
   - sass
 
 projects:
-  - title: Bitwise
-    url: https://praffn.dk/bitwise/
-    thumbnail: /assets/thumbs/bitwise_2.gif
+  - title: ts-static-site
+    url: https://github.com/praffn/ts-static-site
+    thumbnail: /assets/thumbs/ts-static-site-thumb.jpg
   - title: Ingrid
     url: https://github.com/praffn/ingrid
     thumbnail: /assets/thumbs/ingrid_thumb.jpg
   - title: Bitwise
     url: https://praffn.dk/bitwise/
     thumbnail: /assets/thumbs/bitwise_2.gif
+  
 
 analytics: GTM-KRZ9PRQ
