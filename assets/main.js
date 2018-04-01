@@ -18,7 +18,6 @@
   }
 
   function perspectiveCard(card) {
-    console.log('card');
     var boundingBox = card.getBoundingClientRect();
     var cardContainer = card.querySelector(PERSPECTIVE_CARD_CONTAINER);
     var cardText = card.querySelector(PERSPECTIVE_CARD_TEXT);
@@ -96,6 +95,7 @@
 (function(win, doc) {
 
   var el = doc.querySelector('[js-autoscroll]');
+  if (!el) return;
 
   var running = true;  
   var changedEasing = false;
