@@ -28,9 +28,11 @@ $ingrid-visual-color: rgba(255, 0, 0, 0.1);
 }
 
 @mixin ingrid-push($columns) {
-  $ratio: $columns / 12;
   $gutter: $ingrid-gutter * 2;
-  $margin-left: calc(#{ingrid-column-width($columns)} + #{$gutter});
+  margin-left: calc(#{ingrid-column-width($columns)} + #{$gutter});
+  // $ratio: $columns / 12;
+  // $gutter: $ingrid-gutter * 2;
+  // $margin-left: calc(#{ingrid-column-width($columns)} + #{$gutter});
 }
 
 @mixin ingrid-visual() {

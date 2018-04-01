@@ -1,0 +1,17 @@
+.button {
+  background: $color-accent;
+  color: $color-bg;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  border-radius: 0.4em;
+  @include transition(background-color);
+
+  &--large {
+    font-size: 1.2em;
+  }
+
+  &:hover {
+    background-color: lighten($color-accent, 5%);
+  }
+}

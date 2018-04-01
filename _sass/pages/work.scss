@@ -1,0 +1,17 @@
+.work {
+  &__title {
+    text-align: center;
+    font-size: 3em;
+  }
+
+  &__visit-button {
+    text-align: center;
+  }
+
+  &__content {
+    @include media($bp-small) {
+      @include ingrid-column(6);
+      @include ingrid-push(3);      
+    }
+  }
+}

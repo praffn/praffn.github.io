@@ -1,7 +1,6 @@
 //////////////////////
 // Perspective Card //
 //////////////////////
-
 (function(win, doc) {
   var PERSPECTIVE_CARD = '[data-js-perspective-card]';
   var PERSPECTIVE_CARD_CONTAINER = '[data-js-perspective-card-container]';
@@ -89,4 +88,36 @@
 
   init();
 
+})(window, document);
+
+//////////////////////
+// Scroll Showcase  //
+//////////////////////
+(function(win, doc) {
+
+  var el = doc.querySelector('[js-autoscroll]');
+
+  var running = true;  
+  var changedEasing = false;
+  var values = { scrollTop: 0 };
+  var tween = new TWEEN.Tween(values)
+    .to({ scrollTop: 50 }, 1000)
+    .easing(function (t) { return t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t })
+    .onUpdate(function(v) {
+      el.scrollTop = values.scrollTop;
+    })
+    .onStop(function() {
+      running = false;
+    })
+    .repeat(1)
+    .yoyo(1)
+    .start();
+
+  function scroll(time) {
+    if (running) {
+      requestAnimationFrame(scroll);
+    }
+    TWEEN.update(time);
+  }
+  requestAnimationFrame(scroll);
 })(window, document);

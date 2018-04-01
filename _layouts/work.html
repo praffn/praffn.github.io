@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div class="work">
+
+  <div class="work__showcase">
+    <div class="showcase">
+      <div class="showcase__container" js-autoscroll>
+        <img class="showcase__image" src="{{ page.showcase }}">
+      </div>
+    </div>
+  </div>
+
+  <div class="l-container">
+    <h1 class="work__title">{{ page.title }}</h1>
+
+    <div class="work__visit-button">
+      <a href="{{ page.work_url }}" class="button" target="_blank" rel="nofollow">Visit website</a>      
+    </div>
+    <div class="l-grid">
+      <div class="work__content">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</div>

@@ -15,8 +15,10 @@ layout: default
       <div class="home__card-grid">
         {% for item in site.work limit : 3 %}
           <div class="home__card-grid-item">
+            {% assign title = item.title %}
+            {% if item.card_title %}{% assign title = item.card_title %}{% endif %}
             <a href="{{ item.url }}" class="home__card-grid-item-link">
-              {% include perspective-card.html title=item.title background=item.thumbnail %}
+              {% include perspective-card.html title=title background=item.thumbnail %}
             </a>
           </div>        
         {% endfor %}
