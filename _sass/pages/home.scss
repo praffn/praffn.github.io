@@ -1,0 +1,55 @@
+.home {
+  margin-bottom: 3rem;
+  &__title {
+    @include media($bp-small) {
+      margin-top: 6rem;
+      font-size: 3.5em;
+      @include ingrid-column(6);
+      @include ingrid-push(1);
+    }
+  }
+
+  &__subheading {
+    @include media($bp-small) {
+      font-size: 2em;
+      @include ingrid-column(8);
+      @include ingrid-push(1);
+    }
+  }
+
+  em {
+    font-style: normal;
+    color: $color-accent;
+  }
+
+  &__description {
+    @include ingrid-column(6);
+    @include ingrid-push(3);
+  }
+
+  &__card-grid {
+    @include ingrid-container;
+    @include ingrid-collapse; 
+    &-item {
+      @include ingrid-column(12);
+      @include media($bp-small) {
+        @include ingrid-column(4);
+      }
+      margin-top: 1rem;
+      &-link {
+        outline: none;
+      }
+    }
+  }
+}
+
+.home__work {
+  margin-top: 3rem;
+  @include media($bp-small) {
+    margin-top: 5rem;
+  }
+}
+
+.home__projects {
+  margin-top: 6rem;
+}

@@ -1,7 +1,10 @@
-.container {
+.l-container {
   max-width: $max-width;
   margin: 0 auto;
   padding-right: $grid-margin;
   padding-left: $grid-margin;
-  @include ingrid-container;
+}
+
+.l-grid {
+  @include ingrid-container;  
 }

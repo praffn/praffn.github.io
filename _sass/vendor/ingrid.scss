@@ -16,15 +16,21 @@ $ingrid-visual-color: rgba(255, 0, 0, 0.1);
 }
 
 @mixin ingrid-column($columns) {
-  width: calc(ingrid-column-width($columns));
+  width: calc(#{ingrid-column-width($columns)});
   float: left;
   margin-left: $ingrid-gutter;
+}
+
+@mixin ingrid-collapse() {
+  margin-left: -$ingrid-gutter;
+  margin-right: -$ingrid-gutter;
+  width: calc(100% + #{($ingrid-gutter * 2)});
 }
 
 @mixin ingrid-push($columns) {
   $ratio: $columns / 12;
   $gutter: $ingrid-gutter * 2;
-  $margin: calc(#{ingrid-column-width($columns)} + #{$gutter});
+  $margin-left: calc(#{ingrid-column-width($columns)} + #{$gutter});
 }
 
 @mixin ingrid-visual() {

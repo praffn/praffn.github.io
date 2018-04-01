@@ -12,6 +12,12 @@ plugins:
   # - neat
   - sass
 
+navigation:
+  - title: Home
+    url: /
+  - title: Contact
+    url: /contact
+
 projects:
   - title: ts-static-site
     url: https://github.com/praffn/ts-static-site
@@ -22,6 +28,15 @@ projects:
   - title: Bitwise
     url: https://praffn.dk/bitwise/
     thumbnail: /assets/thumbs/bitwise_2.gif
+  - title: Flagrant
+    url: https://github.com/praffn/Flagrant
+    thumbnail: /assets/thumbs/flagrant_thumb.jpg
+  - title: btc-cli
+    url: https://github.com/praffn/btc
+    thumbnail: /assets/thumbs/btc_thumb.gif
+  - title: Prat
+    url: https://praffn.dk/prat/
+    thumbnail: /assets/thumbs/prat_thumb.jpg
   
 
 analytics: GTM-KRZ9PRQ
