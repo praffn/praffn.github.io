@@ -110,8 +110,9 @@
       running = false;
     })
     .repeat(1)
-    .yoyo(1)
-    .start();
+    .yoyo(1);
+
+  win.setTimeout(tween.start.bind(tween), 3000);
 
   function scroll(time) {
     if (running) {
