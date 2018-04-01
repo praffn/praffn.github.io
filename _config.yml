@@ -1,6 +1,6 @@
 title: Phillip Raffnsøe
-baseurl: "" # the subpath of your site, e.g. /blog
-url: ""
+baseurl: ""
+url: "https://praffn.dk"
 
 collections:
   work:
@@ -35,7 +35,7 @@ projects:
     url: https://github.com/praffn/btc
     thumbnail: /assets/thumbs/btc_thumb.gif
   - title: Prat
-    url: https://praffn.dk/prat/
+    url: https://github.com/praffn/prat/
     thumbnail: /assets/thumbs/prat_thumb.jpg
   
 

@@ -4,13 +4,26 @@
 
 .header__inner {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-content: center;
+  @include media($bp-medium) { 
+    flex-direction: row;
+  }
 }
 
 .header__logo {
   &-link {
     text-decoration: none;
     color: $color-fg;
+  }
+}
+
+.header__nav {
+  align-self: center;
+  margin-top: 1rem;
+  @include media($bp-medium) {
+    align-self: auto;
+    margin-top: 0;
   }
 }
