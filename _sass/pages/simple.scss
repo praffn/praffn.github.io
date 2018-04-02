@@ -1,0 +1,7 @@
+.simple {
+  &__content {
+    @include media($bp-medium) {
+      @include ingrid-column(6);
+    }
+  }
+}
