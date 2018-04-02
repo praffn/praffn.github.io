@@ -8,7 +8,4 @@ permalink: /work/assa/
 work_url: http://entry.assaabloyentrance.com/
 ---
 
-# assa abloy
-
-* hello
-* world
+Website for Assa Abloy Entry. Built using Webpack to bundle es2015 javascript and Sass. Hubspot integration.

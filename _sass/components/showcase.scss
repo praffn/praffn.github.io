@@ -24,6 +24,21 @@
     box-shadow: 1.5rem 1.5rem 0 rgba($color-fg, 0.1);
   }
 
+  &__toolbar {
+    background-color: #ddd;
+    overflow: auto;
+    pointer-events: none;
+
+    &-title {
+      border-radius: 0.2rem;
+      font-size: 0.4em;
+      display: block;
+      padding: 0.2em 0.5em;
+      margin: 0.3rem;
+      background: $color-bg;
+    }
+  }
+
   &__image {
     width: 100%;
     display: block;

@@ -7,4 +7,4 @@ permalink: /work/wunsch
 work_url: http://www.wunschdesign.dk/
 ---
 
-wunsch
+Website for Wunsch Design in Copenhagen. Built using static site generator [Wintersmith](http://wintersmith.io/) with Sass and es2015.

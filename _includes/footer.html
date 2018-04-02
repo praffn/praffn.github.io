@@ -1,7 +1,50 @@
+<footer class="footer l-container">
+  <div class="footer__social">
+    <ul class="social">
+      {% for social_hash in site.social %}
+        {% for social in social_hash %}
+          <li class="social__item">
+            <a href="{{ social[1] }}" target="_blank" class="social__link">
+              <span class="social__icon"><i class="fab fa-{{ social[0] }}"></i></span>
+              <span class="social__text">{{ social[0] }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="footer__contact">
+    <p>praffn &centerdot; Phillip Raffnsøe Nilsson &centerdot; Vesterbrogade 198, 1.th - 1800 Frederiksberg C &centerdot; <a href="tel:{{ site.contact.phone }}">{{ site.contact.phone }}</a> &centerdot; <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a> &centerdot; CVR: 38005103</p>
+  </div>
+  <!-- <div class="footer__inner l-grid">
+    <div class="footer__contact">
+      <ul class="footer__contact-information">
+        <li>praffn</li>
+        <li>Phillip Raffnsøe Nilsson</li>
+        <li>Vesterbrogade 198, 1.th</li>
+        <li>1800 Frederiksberg C</li>
+        <li><a href="tel:{{ site.contact.phone }}">{{ site.contact.phone }}</a></li>
+        <li><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>
+        <li>CVR: 38005103</li>
+      </ul>
+    </div>
+    <div class="footer__social">
+      <ul class="footer__social-items">
+        <li><a href="" target="_blank">github <i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/praffn/" target="_blank">linkedin.com/in/praffn</a></li>
+      </ul>
+    </div>
+  </div> -->
+</footer>
+
+<!-- font awesome brands -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/brands.js" integrity="sha384-qJKAzpOXfvmSjzbmsEtlYziSrpVjh5ROPNqb8UZ60myWy7rjTObnarseSKotmJIx" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/fontawesome.js" integrity="sha384-2IUdwouOFWauLdwTuAyHeMMRFfeyy4vqYNjodih+28v2ReC+8j+sLF9cK339k5hY" crossorigin="anonymous"></script>
+<!-- tween lib -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script> 
 <!-- Google Tag Manager (noscript) -->
 <noscript>
   <iframe src="https://www.googletagmanager.com/ns.html?id={{ site.analytics }}" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
   <!-- End Google Tag Manager (noscript) -->
-<script src="{{"/assets/main.js" | relative_url }}"></script>
+<script src="{{ "/assets/main.js" | relative_url }}"></script>

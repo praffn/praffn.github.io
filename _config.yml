@@ -2,6 +2,15 @@ title: Phillip Raffnsøe
 baseurl: ""
 url: "https://praffn.dk"
 
+contact:
+  email: phillip@praffn.dk
+  phone: '+45 42483410'
+
+social:
+  - github: https://github.com/praffn/
+  - linkedin: https://www.linkedin.com/in/praffn/
+  - instagram: https://www.instagram.com/praffn.jpg/
+
 collections:
   work:
     output: true
@@ -15,6 +24,8 @@ plugins:
 navigation:
   - title: Home
     url: /
+  - title: About
+    url: /about
   - title: Contact
     url: /contact
 
